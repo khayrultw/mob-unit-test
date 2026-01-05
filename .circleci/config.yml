@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        keys:
+          keys:
             - gradle-{{ checksum "build.gradle.kts" }} - {{ checksum "app/build.gradle.kts" }}
             - gradle-
       - run:
